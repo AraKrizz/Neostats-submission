@@ -1,4 +1,5 @@
 .env
 .venv/
 sample_open_ai_wrapper.py
+vector_store/
 __pycache__/

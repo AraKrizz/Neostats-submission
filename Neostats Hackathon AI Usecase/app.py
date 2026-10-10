@@ -161,7 +161,7 @@ SCHEMA_DEFINITION = """
 EXACT SQLITE SCHEMA:
 1. customers (customer_id TEXT PK, full_name TEXT, phone TEXT, email TEXT, city TEXT, date_of_birth TEXT, driving_license_no TEXT, kyc_status TEXT, customer_tier TEXT, created_at TEXT)
 2. vehicles (vehicle_id TEXT PK, registration_no TEXT, vehicle_type TEXT, model TEXT, hub_name TEXT, hourly_rate REAL, daily_rate REAL, battery_capacity_kwh REAL, status TEXT, commissioned_on TEXT)
-3. bookings (booking_id TEXT PK, customer_id TEXT FK, vehicle_id TEXT FK, booked_at TEXT, scheduled_start TEXT, scheduled_end TEXT, actual_return_at TEXT, cancelled_at TEXT, booking_status TEXT, return_battery_pct INTEGER)
+3. bookings (booking_id TEXT PK, customer_id TEXT FK, vehicle_id TEXT FK, booked_at TEXT, scheduled_start TEXT, scheduled_end TEXT, actual_return_at TEXT, cancelled_at TEXT, booking_status TEXT (UPC = upcoming, ONG = ongoing, CMP = completed, CNL_U = cancelled by user, CNL_S = cancelled by staff, NSH = no-show), return_battery_pct INTEGER)
 4. payments (payment_id TEXT PK, booking_id TEXT FK, payment_type TEXT, amount REAL, gst_amount REAL, payment_method TEXT, payment_status TEXT, transaction_ref TEXT, paid_at TEXT, remarks TEXT)
 5. damage_reports (report_id TEXT PK, booking_id TEXT FK, vehicle_id TEXT FK, reported_by TEXT, damage_category TEXT, severity TEXT, description TEXT, assessed_cost REAL, claim_status TEXT, reported_at TEXT)
 """

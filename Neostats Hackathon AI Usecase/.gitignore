@@ -1,0 +1,4 @@
+.env
+.venv/
+sample_open_ai_wrapper.py
+__pycache__/
